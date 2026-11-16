@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/theme.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -25,14 +26,18 @@
 
   <section id="v-test" class="panel">
     <div class="box ctl">
-      <div class="label">Раздел</div>
-      <div class="chips" id="secchips"></div>
+      <div id="secrow">
+        <div class="label">Раздел</div>
+        <div class="chips" id="secchips"></div>
+      </div>
       <div id="toprow" class="ctl" hidden>
         <div class="label" id="toplabel">Вопросы</div>
         <div class="chips" id="topchips"></div>
       </div>
-      <div class="label">Тип заданий</div>
-      <div class="chips" id="kindchips"></div>
+      <div id="kindrow">
+        <div class="label">Тип заданий</div>
+        <div class="chips" id="kindchips"></div>
+      </div>
       <div class="row">
         <button class="btn" id="b-order" aria-pressed="false">Вперемешку</button>
         <button class="btn" id="b-wrong">Повторить ошибки</button>
@@ -55,6 +60,7 @@
 </div>
 <div class="lb" id="lb" role="dialog" aria-label="Увеличенная схема"><img id="lbimg" alt=""></div>
 
+<script src="data/course.js"></script>
 <script src="js/helpers.js"></script>
 <script src="data/sections.js"></script>
 <script src="data/figs.js"></script>
