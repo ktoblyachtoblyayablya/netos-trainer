@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later · Copyright (C) 2026 Пантелеев Г.Д. -->
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Тренажёр «Сетевые ОС: Linux»</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<noscript><p style="padding:16px">Для работы тренажёра включите JavaScript.</p></noscript>
+<div class="wrap">
+  <header>
+    <h1>Сетевые ОС и администрирование (Linux) — тренажёр и билеты</h1>
+    <p id="sub"></p>
+  </header>
+  <div class="tabs" role="tablist">
+    <button class="tab" id="tab-test" role="tab" aria-selected="true">Тест</button>
+    <button class="tab" id="tab-tk" role="tab" aria-selected="false">Билеты</button>
+    <button class="tab" id="tab-sch" role="tab" aria-selected="false">Схемы и шпаргалки</button>
+  </div>
+
+  <section id="v-test" class="panel">
+    <div class="box ctl">
+      <div class="label">Раздел</div>
+      <div class="chips" id="secchips"></div>
+      <div id="toprow" class="ctl" hidden>
+        <div class="label" id="toplabel">Вопросы</div>
+        <div class="chips" id="topchips"></div>
+      </div>
+      <div class="label">Тип заданий</div>
+      <div class="chips" id="kindchips"></div>
+      <div class="row">
+        <button class="btn" id="b-order" aria-pressed="false">Вперемешку</button>
+        <button class="btn" id="b-wrong">Повторить ошибки</button>
+        <button class="btn" id="b-restart">Начать заново</button>
+        <button class="btn" id="b-reset">Сбросить статистику</button>
+      </div>
+    </div>
+    <div class="prog">
+      <div class="stat"><span id="s-pos"></span><span id="s-score"></span></div>
+      <div class="bar" id="bar"><i class="g"></i><i class="r"></i></div>
+    </div>
+    <div id="stage"></div>
+    <p class="hint">Клавиши: 1–5 — выбрать ответ, Enter — проверить введённую команду и перейти к следующему вопросу. В заданиях с вводом регистр важен (как в Linux); не учитываются лишние пробелы, префикс sudo, вид кавычек, точка с запятой в конце и порядок букв в слитных ключах (-tulnp = -lntup). Нажмите на схему, чтобы увеличить.</p>
+  </section>
+
+  <section id="v-tk" class="panel" hidden></section>
+  <section id="v-sch" class="panel" hidden></section>
+  <section id="v-all" class="panel" hidden></section>
+  <footer class="foot">Автор: Пантелеев Г.Д. · по материалам курса «Сетевые ОС и администрирование сетей (часть 1 — Linux)» (Казаков Ф.А.) · <a href="#all">все билеты одной страницей</a></footer>
+</div>
+<div class="lb" id="lb" role="dialog" aria-label="Увеличенная схема"><img id="lbimg" alt=""></div>
+
+<script src="js/helpers.js"></script>
+<script src="data/sections.js"></script>
+<script src="data/figs.js"></script>
+<script src="data/cards.js"></script>
+<script src="data/answers/os.js"></script>
+<script src="data/answers/dhcp.js"></script>
+<script src="data/answers/dns.js"></script>
+<script src="data/answers/web.js"></script>
+<script src="data/answers/smb.js"></script>
+<script src="data/answers/mail.js"></script>
+<script src="data/answers/sec.js"></script>
+<script src="data/answers/snmp.js"></script>
+<script src="data/answers/lab.js"></script>
+<script src="data/questions/os.js"></script>
+<script src="data/questions/dhcp.js"></script>
+<script src="data/questions/dns.js"></script>
+<script src="data/questions/web.js"></script>
+<script src="data/questions/smb.js"></script>
+<script src="data/questions/mail.js"></script>
+<script src="data/questions/sec.js"></script>
+<script src="data/questions/snmp.js"></script>
+<script src="data/questions/lab.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
